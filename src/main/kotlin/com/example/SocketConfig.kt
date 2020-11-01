@@ -12,12 +12,12 @@ class SocketConfig: Controller() {
 
     fun openConnectServer(ip: String, cnPort: Int): Socket {
         println("[System] Connecting to remote server at $ip ...")
-        return Socket(ip, cnPort).also { textService.text = "[System] Connected to $ip at port $cnPort" }
+        return Socket(ip, cnPort).also {fire(TextService("[System] Connected to $ip at port $cnPort")) }
     }
 
     fun openClient2Server(clPort: Int): Socket{
-        textService.text = "[System] Waiting for connections at port ${clPort}"
-        return  ServerSocket(clPort).accept().also { textService.text =("[System] Client connected ! -> ${it.inetAddress}") }
+        fire(TextService("[System] Waiting for connections at port ${clPort}"))
+        return  ServerSocket(clPort).accept().also { fire(TextService("[System] Client connected ! -> ${it.inetAddress}")) }
     }
 }
 

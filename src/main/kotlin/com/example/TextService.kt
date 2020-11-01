@@ -1,12 +1,5 @@
 package com.example
 
-import tornadofx.Controller
-import tornadofx.getProperty
-import tornadofx.property
+import tornadofx.FXEvent
 
-class TextService: Controller() {
-
-    var text: String by property("...")
-    fun textProperty() = getProperty(TextService::text)
-
-}
+class TextService(val text: String): FXEvent()
