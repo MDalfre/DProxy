@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="tornadofx-gradle-project-kts.main">
+    <output-path>$PROJECT_DIR$/out/artifacts/tornadofx_gradle_project_kts_main</output-path>
+    <root id="root">
+      <element id="archive" name="tornadofx_gradle_project_kts_main.jar">
+        <element id="module-output" name="tornadofx-gradle-project-kts.main" />
+      </element>
+    </root>
+  </artifact>
+</component>
